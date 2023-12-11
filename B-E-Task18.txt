@@ -1,0 +1,33 @@
+CREATE DATABASE DemoApp
+
+CREATE TABLE Users(
+	Id int,
+	Name varchar(50),
+	Surname varchar(50),
+	Email varchar(100),
+	ContactNumber varchar(100),
+	Age int,
+	Adress varchar(300)
+)
+
+
+
+INSERT INTO Users
+VALUES (1,'Samir','Bebirov','samirb@gmail.com','050-050-50-50',22,'Baki ,Ag-Seher'),
+(2,'Mahmud','Salmanov','salmanoff44@gmail.com','077-777-70-77',19,'Gence'),
+(3,'Sirxan','Quliyev','aleyev@gmail.com','050-211-10-07',22,'Naxcivan')
+SELECT Name,Surname,Email FROM Users
+
+CREATE TABLE Categories (
+	Id int,
+	Name varchar(50),
+	Slug varchar(50),
+	CreatedAt date,
+	IsActive bit
+)
+SELECT Name,IsActive FROM Categories
+
+INSERT INTO Categories
+VALUES (1,'Coler','/color','2020-07-20',1),
+(2,'Metal','/metal','2022-03-02',0),
+(3,'Wood','/wood','2022-12-31',1)
